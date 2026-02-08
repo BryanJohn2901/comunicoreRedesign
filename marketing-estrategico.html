@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Estratégico - Comunicore</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#3B82F6',
+                            DEFAULT: '#1e3a8a',
+                            dark: '#0f172a',
+                            card: '#1e293b',
+                            accent: '#0ea5e9',
+                            whatsapp: '#25D366',
+                            whatsappDark: '#128C7E'
+                        }
+                    },
+                    backgroundImage: {
+                        'premium-gradient': 'linear-gradient(to bottom, #0f172a, #1e293b)',
+                    },
+                    boxShadow: {
+                        'glow-blue': '0 0 20px rgba(59, 130, 246, 0.3)',
+                        'glow-accent': '0 0 20px rgba(14, 165, 233, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .dropdown-bridge::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 100%;
+            height: 20px;
+        }
+        body { -webkit-font-smoothing: antialiased; }
+        .mobile-menu-hidden { display: none; }
+        .mobile-menu-visible {
+            display: block;
+            animation: slideDown 0.3s ease-out forwards;
+        }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased bg-[#0f172a] text-gray-300 selection:bg-brand-accent selection:text-white">
+
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html">
+                        <img src="img/logo-comunicore.png" alt="Comunicore Logo"
+                            class="h-14 w-auto object-contain hover:opacity-90 transition">
+                    </a>
+                </div>
+
+                <div class="hidden md:flex space-x-6 lg:space-x-8 items-center h-full">
+                    <a href="index.html" class="text-xs lg:text-sm font-bold text-gray-600 hover:text-brand-DEFAULT transition tracking-wide">INÍCIO</a>
+                    <a href="index.html#quem-somos" class="text-xs lg:text-sm font-bold text-gray-600 hover:text-brand-DEFAULT transition tracking-wide">QUEM SOMOS</a>
+
+                    <div class="relative group h-full flex items-center">
+                        <a href="index.html#servicos" class="text-xs lg:text-sm font-bold text-brand-DEFAULT transition tracking-wide flex items-center gap-1 cursor-pointer">
+                            SERVIÇOS
+                            <i class="fas fa-chevron-down text-[10px] opacity-70 group-hover:opacity-100 transition-opacity mt-0.5"></i>
+                        </a>
+                        <div class="absolute top-[80%] left-0 w-72 bg-white border border-gray-100 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 p-2 z-50 dropdown-bridge">
+                            <div class="flex flex-col">
+                                <a href="assessoria-imprensa.html" class="block px-4 py-3 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition font-medium flex items-center gap-3">
+                                    <i class="fas fa-newspaper text-blue-300 group-hover:text-blue-600 w-5 text-center"></i> Assessoria de Imprensa
+                                </a>
+                                <a href="marketing-estrategico.html" class="block px-4 py-3 text-sm text-cyan-600 bg-cyan-50 rounded-lg transition font-medium flex items-center gap-3">
+                                    <i class="fas fa-chart-line text-cyan-600 w-5 text-center"></i> Marketing Estratégico
+                                </a>
+                                <a href="midias-sociais.html" class="block px-4 py-3 text-sm text-gray-600 hover:bg-purple-50 hover:text-purple-600 rounded-lg transition font-medium flex items-center gap-3">
+                                    <i class="fas fa-share-alt text-purple-300 group-hover:text-purple-600 w-5 text-center"></i> Mídias Sociais
+                                </a>
+                                <a href="producao-lives.html" class="block px-4 py-3 text-sm text-gray-600 hover:bg-red-50 hover:text-red-600 rounded-lg transition font-medium flex items-center gap-3">
+                                    <i class="fas fa-video text-red-300 group-hover:text-red-600 w-5 text-center"></i> Produção de Lives
+                                </a>
+                                <a href="comunicacao-corporativa.html" class="block px-4 py-3 text-sm text-gray-600 hover:bg-indigo-50 hover:text-indigo-600 rounded-lg transition font-medium flex items-center gap-3">
+                                    <i class="fas fa-building text-indigo-300 group-hover:text-indigo-600 w-5 text-center"></i> Comunicação Corporativa
+                                </a>
+                                <a href="gestao-crises.html" class="block px-4 py-3 text-sm text-gray-600 hover:bg-orange-50 hover:text-orange-600 rounded-lg transition font-medium flex items-center gap-3">
+                                    <i class="fas fa-shield-alt text-orange-300 group-hover:text-orange-600 w-5 text-center"></i> Gestão de Crises
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="index.html#cases" class="text-xs lg:text-sm font-bold text-gray-600 hover:text-brand-DEFAULT transition tracking-wide">CASES</a>
+                    <a href="index.html#clientes" class="text-xs lg:text-sm font-bold text-gray-600 hover:text-brand-DEFAULT transition tracking-wide">CLIENTES</a>
+                    <a href="index.html#blog" class="text-xs lg:text-sm font-bold text-gray-600 hover:text-brand-DEFAULT transition tracking-wide">BLOG</a>
+
+                    <a href="https://wa.me/5541998964740" target="_blank"
+                        class="bg-brand-whatsapp text-white px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-brand-whatsappDark shadow-lg hover:shadow-green-500/50 transition-all duration-300 transform hover:-translate-y-0.5 flex items-center gap-2 border border-green-400/20">
+                        <i class="fab fa-whatsapp text-lg"></i> Fale Conosco
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-brand-DEFAULT focus:outline-none p-2">
+                        <i id="menu-icon" class="fas fa-bars text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu-hidden md:hidden absolute top-24 left-0 w-full bg-white border-t border-gray-100 shadow-2xl h-screen overflow-y-auto pb-32">
+            <div class="px-6 py-8 flex flex-col space-y-6">
+                <a href="index.html" class="text-lg font-bold text-gray-700 hover:text-brand-DEFAULT">INÍCIO</a>
+                <a href="index.html#quem-somos" class="text-lg font-bold text-gray-700 hover:text-brand-DEFAULT">QUEM SOMOS</a>
+                
+                <div class="border-l-2 border-brand-accent/30 pl-4 flex flex-col space-y-4">
+                    <span class="text-xs font-bold text-brand-accent uppercase tracking-widest mb-1">Serviços</span>
+                    <a href="assessoria-imprensa.html" class="text-gray-600 hover:text-brand-DEFAULT">Assessoria de Imprensa</a>
+                    <a href="marketing-estrategico.html" class="text-cyan-600 font-bold">Marketing Estratégico</a>
+                    <a href="midias-sociais.html" class="text-gray-600 hover:text-brand-DEFAULT">Mídias Sociais</a>
+                    <a href="producao-lives.html" class="text-gray-600 hover:text-brand-DEFAULT">Produção de Lives</a>
+                    <a href="comunicacao-corporativa.html" class="text-gray-600 hover:text-brand-DEFAULT">Comunicação Corporativa</a>
+                    <a href="gestao-crises.html" class="text-gray-600 hover:text-brand-DEFAULT">Gestão de Crises</a>
+                </div>
+
+                <a href="index.html#cases" class="text-lg font-bold text-gray-700 hover:text-brand-DEFAULT">CASES</a>
+                <a href="index.html#clientes" class="text-lg font-bold text-gray-700 hover:text-brand-DEFAULT">CLIENTES</a>
+                <a href="index.html#blog" class="text-lg font-bold text-gray-700 hover:text-brand-DEFAULT">BLOG</a>
+
+                <a href="https://wa.me/5541998964740" target="_blank"
+                    class="bg-brand-whatsapp text-white py-4 rounded-xl text-center font-bold uppercase tracking-widest hover:bg-brand-whatsappDark shadow-lg shadow-green-500/30 flex items-center justify-center gap-3 mt-4">
+                    <i class="fab fa-whatsapp text-xl"></i> Fale Conosco
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative bg-[#0f172a] pt-44 pb-32 lg:pt-60 lg:pb-48 overflow-hidden flex items-center justify-center">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1920"
+                alt="Marketing Estratégico"
+                class="w-full h-full object-cover opacity-20 mix-blend-luminosity transform scale-105 hover:scale-110 transition-transform duration-[20s] ease-linear">
+            
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0f172a] via-[#0f172a]/90 to-[#0f172a]"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-cyan-900/20 to-black/60"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-6 lg:px-8 text-center z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-900/20 border border-cyan-500/20 backdrop-blur-md mb-8 shadow-lg animate-[fadeIn_1s_ease-out]">
+                <span class="flex h-2 w-2 relative">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+                </span>
+                <span class="text-xs font-semibold text-cyan-200 tracking-widest uppercase">Performance & Dados</span>
+            </div>
+
+            <h1 class="text-5xl lg:text-7xl tracking-tight mb-8 leading-[1.1] text-white">
+                <span class="block font-light text-gray-300 mb-2">Resultados Reais</span>
+                <span class="block font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-200 to-brand-accent drop-shadow-2xl">
+                    MARKETING ESTRATÉGICO
+                </span>
+            </h1>
+
+            <p class="mt-6 text-xl text-gray-400 max-w-3xl mx-auto mb-14 font-light leading-relaxed">
+                Vamos além dos likes. Unimos <span class="font-bold text-white">Inteligência de Dados (BI)</span>, SEO e criatividade para transformar sua presença digital em uma máquina de vendas.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="#detalhes"
+                    class="group relative flex items-center justify-center gap-3 px-10 py-5 bg-white text-brand-dark rounded-full font-bold text-sm uppercase tracking-widest shadow-[0_0_30px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+                    <i class="fas fa-arrow-down text-brand-accent group-hover:translate-y-1 transition-transform"></i>
+                    <span>Como Atuamos</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="detalhes" class="py-24 relative bg-[#0b1120] border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="relative group order-2 lg:order-1">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-brand-accent to-cyan-400 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
+                        alt="Análise de Dados"
+                        class="relative rounded-2xl shadow-2xl z-10 border border-white/10 grayscale hover:grayscale-0 transition-all duration-700">
+                </div>
+                
+                <div class="order-1 lg:order-2 space-y-6">
+                    <h2 class="text-brand-accent font-bold tracking-widest uppercase text-xs mb-1">Do Planejamento à Ação</h2>
+                    <h3 class="text-3xl font-bold text-white sm:text-4xl mb-4 leading-tight">O fim do "Achismo" no seu negócio</h3>
+                    
+                    <div class="text-gray-400 leading-relaxed text-lg font-light space-y-6">
+                        <p>
+                            Muitas agências focam apenas na estética. Na <strong>Comunicore</strong>, o design é apenas o começo. Nossa abordagem de Marketing Estratégico é fundamentada em análise de mercado, comportamento do consumidor e métricas de conversão.
+                        </p>
+                        <p>
+                            Criamos ecossistemas digitais onde seu site, redes sociais e tráfego pago trabalham em sintonia para atrair, nutrir e converter leads qualificados.
+                        </p>
+                        <ul class="space-y-4 mt-4">
+                            <li class="flex items-center gap-3">
+                                <i class="fas fa-check-circle text-cyan-400"></i>
+                                <span>Foco total em ROI (Retorno sobre Investimento)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fas fa-check-circle text-cyan-400"></i>
+                                <span>Monitoramento contínuo de KPIs</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fas fa-check-circle text-cyan-400"></i>
+                                <span>Estratégias Omnichannel integradas</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 relative overflow-hidden bg-[#0f172a]">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-20">
+                <h2 class="text-brand-accent font-bold tracking-widest uppercase text-xs mb-3">Nossas Frentes</h2>
+                <h3 class="text-3xl font-bold text-white sm:text-4xl">Pilares da Estratégia</h3>
+                <div class="w-20 h-1 bg-gradient-to-r from-brand-DEFAULT to-cyan-400 mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="group bg-white/5 border border-white/5 p-8 rounded-2xl hover:shadow-xl hover:bg-white/10 hover:border-green-400/30 hover:-translate-y-2 transition-all duration-300 backdrop-blur-sm relative overflow-hidden flex flex-col">
+                    <div class="w-14 h-14 bg-[#1e293b] border border-white/10 rounded-xl flex items-center justify-center mb-6 text-green-400 group-hover:bg-green-500 group-hover:text-white transition-colors shadow-lg">
+                        <i class="fas fa-search text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">SEO & Tráfego Orgânico</h4>
+                    <p class="text-gray-400 leading-relaxed text-sm font-light mb-6 flex-grow">
+                        Otimização técnica (On-page e Off-page) para colocar seu site no topo do Google. Pesquisa de palavras-chave, link building e auditoria técnica.
+                    </p>
+                </div>
+
+                <div class="group bg-white/5 border border-white/5 p-8 rounded-2xl hover:shadow-xl hover:bg-white/10 hover:border-blue-400/30 hover:-translate-y-2 transition-all duration-300 backdrop-blur-sm relative overflow-hidden flex flex-col">
+                    <div class="w-14 h-14 bg-[#1e293b] border border-white/10 rounded-xl flex items-center justify-center mb-6 text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-colors shadow-lg">
+                        <i class="fas fa-bullseye text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Gestão de Tráfego</h4>
+                    <p class="text-gray-400 leading-relaxed text-sm font-light mb-6 flex-grow">
+                        Campanhas de alta performance no Google Ads, Meta Ads (Instagram/Facebook) e LinkedIn Ads, focadas em Custo por Lead (CPL) otimizado.
+                    </p>
+                </div>
+
+                <div class="group bg-white/5 border border-white/5 p-8 rounded-2xl hover:shadow-xl hover:bg-white/10 hover:border-purple-400/30 hover:-translate-y-2 transition-all duration-300 backdrop-blur-sm relative overflow-hidden flex flex-col">
+                    <div class="w-14 h-14 bg-[#1e293b] border border-white/10 rounded-xl flex items-center justify-center mb-6 text-purple-400 group-hover:bg-purple-500 group-hover:text-white transition-colors shadow-lg">
+                        <i class="fas fa-magnet text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Inbound Marketing</h4>
+                    <p class="text-gray-400 leading-relaxed text-sm font-light mb-6 flex-grow">
+                        Criação de jornadas de compra, automação de e-mail marketing, landing pages de alta conversão e nutrição de leads.
+                    </p>
+                </div>
+
+                <div class="group bg-white/5 border border-white/5 p-8 rounded-2xl hover:shadow-xl hover:bg-white/10 hover:border-pink-400/30 hover:-translate-y-2 transition-all duration-300 backdrop-blur-sm relative overflow-hidden flex flex-col">
+                    <div class="w-14 h-14 bg-[#1e293b] border border-white/10 rounded-xl flex items-center justify-center mb-6 text-pink-400 group-hover:bg-pink-500 group-hover:text-white transition-colors shadow-lg">
+                        <i class="fas fa-fingerprint text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Branding & Posicionamento</h4>
+                    <p class="text-gray-400 leading-relaxed text-sm font-light mb-6 flex-grow">
+                        Definição de arquétipos, tom de voz e identidade visual. Fazemos sua marca ser lembrada e desejada pelo público certo.
+                    </p>
+                </div>
+
+                <div class="group bg-white/5 border border-white/5 p-8 rounded-2xl hover:shadow-xl hover:bg-white/10 hover:border-yellow-400/30 hover:-translate-y-2 transition-all duration-300 backdrop-blur-sm relative overflow-hidden flex flex-col">
+                    <div class="w-14 h-14 bg-[#1e293b] border border-white/10 rounded-xl flex items-center justify-center mb-6 text-yellow-400 group-hover:bg-yellow-500 group-hover:text-white transition-colors shadow-lg">
+                        <i class="fas fa-chart-bar text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">BI & Analytics</h4>
+                    <p class="text-gray-400 leading-relaxed text-sm font-light mb-6 flex-grow">
+                        Implementação de dashboards em tempo real para tomada de decisão baseada em dados, não em intuição.
+                    </p>
+                </div>
+
+                <div class="group bg-white/5 border border-white/5 p-8 rounded-2xl hover:shadow-xl hover:bg-white/10 hover:border-cyan-400/30 hover:-translate-y-2 transition-all duration-300 backdrop-blur-sm relative overflow-hidden flex flex-col">
+                    <div class="w-14 h-14 bg-[#1e293b] border border-white/10 rounded-xl flex items-center justify-center mb-6 text-cyan-400 group-hover:bg-cyan-500 group-hover:text-white transition-colors shadow-lg">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Growth Marketing</h4>
+                    <p class="text-gray-400 leading-relaxed text-sm font-light mb-6 flex-grow">
+                        Estratégias de crescimento acelerado, testes A/B constantes e otimização da taxa de conversão (CRO).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-32 relative overflow-hidden bg-gradient-to-b from-[#0f172a] to-black">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+
+        <div class="max-w-4xl mx-auto px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-brand-accent font-bold tracking-widest uppercase text-sm mb-4">Pronto para escalar?</h2>
+            <h3 class="text-4xl md:text-6xl font-black text-white mb-8 leading-tight">
+                Transforme cliques em <br>faturamento.
+            </h3>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="https://wa.me/5541998964740" target="_blank"
+                    class="group flex items-center justify-center gap-3 px-12 py-5 bg-gradient-to-r from-brand-whatsapp to-brand-whatsappDark text-white rounded-full font-bold text-lg shadow-[0_0_40px_rgba(37,211,102,0.4)] hover:shadow-[0_0_60px_rgba(37,211,102,0.6)] transform hover:-translate-y-1 transition-all duration-300">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    Solicitar Diagnóstico
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="relative bg-[#020617] text-gray-400 pt-20 pb-10 border-t border-white/10 font-sans overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-1 bg-gradient-to-r from-transparent via-brand-accent/50 to-transparent blur-sm"></div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
+                <div class="space-y-6">
+                    <a href="index.html" class="block">
+                        <img src="img/logoBranca.png" alt="Comunicore Logo" class="h-20 w-auto object-contain opacity-90">
+                    </a>
+                    <p class="text-sm leading-relaxed text-gray-500">
+                        Agência full-service dedicada a transformar comunicação corporativa em resultados de negócios tangíveis e autoridade de marca.
+                    </p>
+                    <div class="flex space-x-5">
+                        <a href="#" class="text-gray-400 hover:text-white transition transform hover:scale-110"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition transform hover:scale-110"><i class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition transform hover:scale-110"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition transform hover:scale-110"><i class="fab fa-youtube text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6 tracking-wide">Navegação</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li><a href="index.html" class="hover:text-brand-accent transition-colors duration-300">Início</a></li>
+                        <li><a href="index.html#quem-somos" class="hover:text-brand-accent transition-colors duration-300">Quem Somos</a></li>
+                        <li><a href="index.html#cases" class="hover:text-brand-accent transition-colors duration-300">Cases de Sucesso</a></li>
+                        <li><a href="index.html#blog" class="hover:text-brand-accent transition-colors duration-300">Blog & Insights</a></li>
+                        <li><a href="index.html#contato" class="hover:text-brand-accent transition-colors duration-300">Fale Conosco</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6 tracking-wide">Expertise</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li><a href="assessoria-imprensa.html" class="hover:text-brand-accent transition-colors duration-300">Assessoria de Imprensa</a></li>
+                        <li><a href="marketing-estrategico.html" class="text-brand-accent font-bold transition-colors duration-300">Marketing Digital</a></li>
+                        <li><a href="comunicacao-corporativa.html" class="hover:text-brand-accent transition-colors duration-300">Comunicação Interna</a></li>
+                        <li><a href="gestao-crises.html" class="hover:text-brand-accent transition-colors duration-300">Gestão de Crises</a></li>
+                        <li><a href="producao-lives.html" class="hover:text-brand-accent transition-colors duration-300">Produção Audiovisual</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6 tracking-wide">Contato</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt mt-1 text-brand-accent"></i>
+                            <span>Av. Sete de Setembro, 5011<br>Conjs 701/702 - Praça do Japão<br>Curitiba, PR - CEP: 80.240-000</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-brand-accent"></i>
+                            <a href="mailto:contato@comunicore.com.br" class="hover:text-white transition">contato@comunicore.com.br</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fab fa-whatsapp text-brand-accent"></i>
+                            <a href="https://wa.me/5541998964740" target="_blank" class="hover:text-white transition">(41) 99896.4740</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-gray-600 text-center md:text-left">© 2024 por ComuniCore Comunicação e MKT</p>
+                <div class="flex space-x-6 text-xs text-gray-600">
+                    <a href="#" class="hover:text-white transition">Política de Privacidade</a>
+                    <a href="#" class="hover:text-white transition">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('mobile-menu-hidden');
+            menu.classList.toggle('mobile-menu-visible');
+            
+            if (menu.classList.contains('mobile-menu-visible')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
+</html>
